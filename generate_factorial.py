@@ -1,4 +1,8 @@
+import time
+
 inputFile = open('input.txt', 'r')
+
+numberList = inputFile.readlines()
 
 
 def getFactorial(n):
@@ -9,6 +13,15 @@ def getFactorial(n):
     return n * getFactorial(n-1)
 
 
-for number in inputFile.readlines():
+output = []
+
+for index, number in enumerate(numberList):
+    outputObj = {'id': index, "n": int(number)}
+    startTime = time.time()
     factorial = getFactorial(int(number))
-    print(factorial)
+    endTime = time.time() - startTime
+    outputObj['time'] = endTime
+    outputObj['result'] = factorial
+    output.append(outputObj)
+
+print(output)
