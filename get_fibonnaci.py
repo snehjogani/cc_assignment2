@@ -12,4 +12,5 @@ def fibonacci(n):
 for number in numberList:
     print('Fibonacci Series upto', number)
     print([fibonacci(i) for i in range(0, int(number))])
-    print('\n')
+    print('\n')    
+
