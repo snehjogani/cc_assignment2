@@ -16,12 +16,12 @@ def getFactorial(n):
 output = []
 
 for index, number in enumerate(numberList):
-    outputObj = {'id': index, "n": int(number)}
+    outputObj = {"id": index, "n": int(number)}
     startTime = time.time()
     factorial = getFactorial(int(number))
     endTime = time.time() - startTime
-    outputObj['time'] = endTime
-    outputObj['result'] = factorial
+    outputObj["time"] = endTime
+    outputObj["result"] = factorial
     output.append(outputObj)
 
 print(output)
