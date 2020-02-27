@@ -11,4 +11,4 @@ def getFactorial(n):
 
 for number in inputFile.readlines():
     factorial = getFactorial(int(number))
-    # print(factorial)
+    print(factorial)
