@@ -14,7 +14,7 @@ def getFibonacci(n):
 output = []
 
 for index, number in enumerate(numberList):
-    outputObj = {"id": index, "n": int(number)}
+    outputObj = {"id": index + 1, "n": int(number)}
     startTime = time.time()
     fibonacciSeries = "0," + ",".join([str(getFibonacci(i)) for i in range(1, int(number))])
     endTime = time.time() - startTime
